@@ -70,8 +70,6 @@ for multiple microservices with minimal manual intervention.
 - Clear separation between build and deploy stages
 - Reduced deployment errors through automation
 
-🔗 Reference: `/ci-cd/github-actions-pipeline.yml`
-
 ---
 
 ### 🔹 Case Study 2: Kubernetes Application Deployment Strategy
@@ -95,8 +93,6 @@ and predictable rollout behavior.
 - Prevents traffic to unhealthy pods
 - Controls resource usage per container
 
-🔗 Reference: `/k8s/deployment.yaml`
-
 ---
 
 ### 🔹 Case Study 3: MongoDB on Kubernetes Using StatefulSet
@@ -116,8 +112,6 @@ An application required persistent data storage within Kubernetes.
 **Why This Design**
 - Ensures data consistency
 - Supports stateful workloads in Kubernetes
-
-🔗 Reference: `/k8s/mongodb-statefulset.yaml`
 
 ---
 
@@ -141,8 +135,6 @@ Manual cloud provisioning was error-prone and inconsistent.
 - Reduces human error
 - Supports multi-environment setups
 
-🔗 Reference: `/terraform/`
-
 ---
 
 ## 🧯 Production Scenarios & Troubleshooting
@@ -152,7 +144,6 @@ Manual cloud provisioning was error-prone and inconsistent.
 - Investigated service connectivity issues within Kubernetes
 - Used logs and metrics to identify application bottlenecks
 
-Detailed notes available in `/docs`.
 
 ---
 
