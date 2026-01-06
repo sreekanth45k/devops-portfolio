@@ -1,0 +1,170 @@
+# 👨‍💻 Sreekanth | DevOps Engineer
+
+DevOps Engineer with around 4 years of experience working on CI/CD pipelines,
+containerized applications, and Kubernetes-based systems.
+Focused on reliability, automation, and operational clarity.
+
+---
+
+## 🧠 Engineering Focus
+
+- Designing CI/CD workflows for containerized applications
+- Writing Kubernetes manifests and deployment strategies
+- Infrastructure design using Infrastructure as Code principles
+- Troubleshooting production incidents and improving system stability
+- Documenting systems for maintainability and team handover
+
+---
+
+## ⚠️ Note on Cloud Environment
+
+Due to temporary unavailability of a personal cloud account,
+this portfolio focuses on **infrastructure design, CI/CD workflows,
+Kubernetes manifests, and operational documentation** based on
+real-world production experience and local validation.
+
+---
+
+## 🛠 Tech Stack
+
+**Containers & Orchestration**
+- Docker
+- Kubernetes (Deployments, Services, Ingress, StatefulSets)
+
+**CI/CD**
+- GitHub Actions
+- Jenkins
+
+**Infrastructure as Code**
+- Terraform (design and validation)
+
+**Monitoring & Operations**
+- Prometheus, Grafana
+- Linux, Bash
+
+---
+
+## 🚀 Case Studies
+
+### 🔹 Case Study 1: Designing CI/CD for Microservices
+
+**Scenario**  
+A development team required automated build and deployment pipelines
+for multiple microservices with minimal manual intervention.
+
+**Design Decisions**
+- GitHub Actions chosen for tight GitHub integration
+- Docker images tagged using commit SHA for immutability
+- Separate workflows for CI and CD
+- Manual approval step before production deployment
+
+**Pipeline Flow**
+1. Code push triggers CI workflow
+2. Application tests are executed
+3. Docker image is built and tagged
+4. Image pushed to container registry
+5. Helm chart used for deployment
+
+**Why This Design**
+- Immutable images enable safe rollbacks
+- Clear separation between build and deploy stages
+- Reduced deployment errors through automation
+
+🔗 Reference: `/ci-cd/github-actions-pipeline.yml`
+
+---
+
+### 🔹 Case Study 2: Kubernetes Application Deployment Strategy
+
+**Scenario**  
+A containerized application needed to be deployed with high availability
+and predictable rollout behavior.
+
+**Design Decisions**
+- Deployment with multiple replicas
+- Readiness and liveness probes configured
+- Resource requests and limits defined
+- RollingUpdate strategy for zero-downtime releases
+
+**Validation**
+- Manifests tested locally using Minikube
+- Verified pod rescheduling and rollout behavior
+
+**Why This Design**
+- Improves application resilience
+- Prevents traffic to unhealthy pods
+- Controls resource usage per container
+
+🔗 Reference: `/k8s/deployment.yaml`
+
+---
+
+### 🔹 Case Study 3: MongoDB on Kubernetes Using StatefulSet
+
+**Scenario**  
+An application required persistent data storage within Kubernetes.
+
+**Design Decisions**
+- StatefulSet used for stable network identity
+- PersistentVolumeClaims for data persistence
+- Headless Service for direct pod access
+
+**Validation**
+- Pod restarts tested without data loss
+- Volume reattachment verified
+
+**Why This Design**
+- Ensures data consistency
+- Supports stateful workloads in Kubernetes
+
+🔗 Reference: `/k8s/mongodb-statefulset.yaml`
+
+---
+
+### 🔹 Case Study 4: Infrastructure Design Using Terraform (Conceptual)
+
+**Scenario**  
+Manual cloud provisioning was error-prone and inconsistent.
+
+**Design Decisions**
+- Modular Terraform structure
+- Separate modules for networking and compute
+- Variables and outputs for reusability
+- Remote state concept documented
+
+**Validation**
+- Code validated using `terraform validate`
+- Logical architecture reviewed for scalability
+
+**Why This Design**
+- Enables repeatable infrastructure
+- Reduces human error
+- Supports multi-environment setups
+
+🔗 Reference: `/terraform/`
+
+---
+
+## 🧯 Production Scenarios & Troubleshooting
+
+- Diagnosed `CrashLoopBackOff` caused by missing environment variables
+- Resolved pod evictions due to memory limit misconfiguration
+- Investigated service connectivity issues within Kubernetes
+- Used logs and metrics to identify application bottlenecks
+
+Detailed notes available in `/docs`.
+
+---
+
+## 📂 Documentation
+
+- `docs/incident-response.md`
+- `docs/kubernetes-troubleshooting.md`
+- `docs/ci-cd-design.md`
+- `docs/deployment-strategy.md`
+
+---
+## 📫 Contact
+
+- GitHub: https://github.com/sreekanth45k
+- Linkedin: https://www.linkedin.com/in/sreekanth-kuruba-94593b174/
